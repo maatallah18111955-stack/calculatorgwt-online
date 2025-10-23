@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manuel d'Utilisation - CalculatorGWT</title>
+    <style>
+        /* Styles pour l'impression PDF */
+        @media print {
+            body {
+                font-family: 'Arial', sans-serif;
+                line-height: 1.4;
+                color: #333;
+                font-size: 12pt;
+            }
+            .page-break {
+                page-break-before: always;
+            }
+            .no-print {
+                display: none;
+            }
+        }
+        
+        body {
+            max-width: 210mm;
+            margin: 0 auto;
+            padding: 20mm;
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #2563eb;
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .logo {
+            font-size: 24pt;
+            font-weight: bold;
+            color: #2563eb;
+        }
+        
+        h1 {
+            color: #2563eb;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 0.5rem;
+        }
+        
+        h2 {
+            color: #374151;
+            margin-top: 1.5rem;
+        }
+        
+        h3 {
+            color: #4b5563;
+        }
+        
+        .code-block {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 4px;
+            padding: 1rem;
+            font-family: 'Courier New', monospace;
+            font-size: 11pt;
+            margin: 1rem 0;
+        }
+        
+        .note {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .warning {
+            background: #f8d7da;
+            border: 1px solid #f5c6cb;
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #e2e8f0;
+            padding: 0.5rem;
+            text-align: left;
+        }
+        
+        th {
+            background: #f8fafc;
+            font-weight: bold;
+        }
+        
+        .step {
+            margin: 1.5rem 0;
+            padding-left: 1rem;
+            border-left: 3px solid #2563eb;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 1rem;
+            border-top: 1px solid #e2e8f0;
+            font-size: 10pt;
+            color: #6b7280;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">CalculatorGWT</div>
+        <h1>Manuel d'Utilisation Complet</h1>
+        <p>Version 1.0 | Octobre 2024</p>
+    </div>
+
+    <h1>Table des Matières</h1>
+    <ol>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#installation">Installation</a></li>
+        <li><a href="#interface">Interface Utilisateur</a></li>
+        <li><a href="#modules">Modules et Fonctionnalités</a></li>
+        <li><a href="#exemples">Exemples d'Utilisation</a></li>
+        <li><a href="#depannage">Dépannage</a></li>
+        <li><a href="#faq">FAQ</a></li>
+    </ol>
+
+    <div class="page-break"></div>
+
+    <h1 id="introduction">1. Introduction</h1>
+    
+    <h2>1.1 Présentation de CalculatorGWT</h2>
+    <p>CalculatorGWT est une calculatrice scientifique avancée développée en Java GWT (Google Web Toolkit). 
+    Elle offre une suite complète d'outils mathématiques pour les étudiants, enseignants, ingénieurs et chercheurs.</p>
+    
+    <h2>1.2 Fonctionnalités Principales</h2>
+    <ul>
+        <li>Calculs scientifiques et arithmétiques avancés</li>
+        <li>Résolution d'équations complexes</li>
+        <li>Calculs matriciels complets</li>
+        <li>Analyses statistiques à deux variables</li>
+        <li>Calculs polynomiaux</li>
+        <li>Opérations arithmétiques (PGCD/PPCM)</li>
+        <li>Visualisation graphique avec histogrammes</li>
+        <li>Interface intuitive et responsive</li>
+    </ul>
+    
+    <div class="note">
+        <strong>💡 Note :</strong> CalculatorGWT fonctionne entièrement dans votre navigateur web, 
+        aucune installation de logiciel n'est requise.
+    </div>
+
+    <h1 id="installation">2. Installation</h1>
+    
+    <h2>2.1 Configuration Requise</h2>
+    <table>
+        <tr>
+            <th>Composant</th>
+            <th>Spécification Minimum</th>
+            <th>Recommandé</th>
+        </tr>
+        <tr>
+            <td>Navigateur</td>
+            <td>Chrome 80+, Firefox 75+, Safari 13+, Edge 80+</td>
+            <td>Dernière version</td>
+        </tr>
+        <tr>
+            <td>JavaScript</td>
+            <td>Activé</td>
+            <td>Activé</td>
+        </tr>
+        <tr>
+            <td>Résolution</td>
+            <td>1024×768</td>
+            <td>1920×1080 ou supérieure</td>
+        </tr>
+        <tr>
+            <td>Espace disque</td>
+            <td>10 MB</td>
+            <td>50 MB</td>
+        </tr>
+    </table>
+    
+    <h2>2.2 Procédure d'Installation</h2>
+    
+    <div class="step">
+        <h3>Étape 1 : Téléchargement</h3>
+        <p>Visitez la page de téléchargement et choisissez la version appropriée :</p>
+        <ul>
+            <li><strong>Version Complète</strong> : Toutes les fonctionnalités (recommandée)</li>
+            <li><strong>Version Lite</strong> : Fonctionnalités essentielles, taille réduite</li>
+        </ul>
+    </div>
+    
+    <div class="step">
+        <h3>Étape 2 : Extraction</h3>
+        <p>Extrayez le fichier ZIP téléchargé dans le dossier de votre choix :</p>
+        <div class="code-block">
+            # Sous Windows : Clic droit → "Extraire tout"<br>
+            # Sous Linux/Mac : unzip CalculatorGWT.zip
+        </div>
+    </div>
+    
+    <div class="step">
+        <h3>Étape 3 : Lancement</h3>
+        <p>Ouvrez le fichier <code>CalculatorGWT.html</code> dans votre navigateur web.</p>
+        <div class="code-block">
+            Naviguez vers le dossier d'installation<br>
+            Double-cliquez sur "CalculatorGWT.html"
+        </div>
+    </div>
+    
+    <div class="warning">
+        <strong>⚠️ Attention :</strong> Pour un fonctionnement optimal, utilisez un navigateur web moderne 
+        et assurez-vous que JavaScript est activé.
+    </div>
+
+    <div class="page-break"></div>
+
+    <h1 id="interface">3. Interface Utilisateur</h1>
+    
+    <h2>3.1 Présentation Générale</h2>
+    <p>L'interface de CalculatorGWT est divisée en plusieurs sections :</p>
+    
+    <h3>Barre de Navigation Principale</h3>
+    <ul>
+        <li><strong>Accueil</strong> : Retour à l'écran principal</li>
+        <li><strong>Calculatrice</strong> : Module de calcul de base</li>
+        <li><strong>Matrices</strong> : Calculs matriciels</li>
+        <li><strong>Équations</strong> : Solveur d'équations</li>
+        <li><strong>Statistiques</strong> : Analyses statistiques</li>
+        <li><strong>Aide</strong> : Documentation intégrée</li>
+    </ul>
+    
+    <h3>Zone d'Affichage</h3>
+    <p>Affichage des résultats, historique des calculs et messages du système.</p>
+    
+    <h3>Panneau de Contrôle</h3>
+    <p>Boutons et contrôles spécifiques à chaque module.</p>
+    
+    <h2>3.2 Raccours Clavier</h2>
+    <table>
+        <tr>
+            <th>Raccourci</th>
+            <th>Action</th>
+        </tr>
+        <tr>
+            <td>Ctrl + C</td>
+            <td>Copier le résultat</td>
+        </tr>
+        <tr>
+            <td>Ctrl + V</td>
+            <td>Coller dans la zone de saisie</td>
+        </tr>
+        <tr>
+            <td>Ctrl + Z</td>
+            <td>Annuler la dernière action</td>
+        </tr>
+        <tr>
+            <td>Ctrl + H</td>
+            <td>Afficher l'historique</td>
+        </tr>
+        <tr>
+            <td>F1</td>
+            <td>Aide contextuelle</td>
+        </tr>
+    </table>
+
+    <h1 id="modules">4. Modules et Fonctionnalités</h1>
+    
+    <h2>4.1 CalculatorGWT (Module Principal)</h2>
+    <p>Calculatrice scientifique standard avec fonctions avancées :</p>
+    <ul>
+        <li>Opérations arithmétiques de base</li>
+        <li>Fonctions trigonométriques (sin, cos, tan)</li>
+        <li>Fonctions logarithmiques (log, ln)</li>
+        <li>Calculs exponentiels et puissances</li>
+        <li>Constantes mathématiques (π, e)</li>
+    </ul>
+    
+    <h2>4.2 ComplexEquationSolver</h2>
+    <p>Résolution d'équations mathématiques complexes :</p>
+    <div class="code-block">
+        Exemple : Résoudre x² + 2x + 1 = 0<br>
+        → Saisir : x^2 + 2*x + 1 = 0<br>
+        → Résultat : x = -1 (racine double)
+    </div>
+    
+    <h2>4.3 MatrixCalculator</h2>
+    <p>Opérations matricielles avancées :</p>
+    <table>
+        <tr>
+            <th>Opération</th>
+            <th>Description</th>
+            <th>Exemple</th>
+        </tr>
+        <tr>
+            <td>Addition</td>
+            <td>Somme de deux matrices</td>
+            <td>A + B</td>
+        </tr>
+        <tr>
+            <td>Multiplication</td>
+            <td>Produit matriciel</td>
+            <td>A × B</td>
+        </tr>
+        <tr>
+            <td>Déterminant</td>
+            <td>Calcul du déterminant</td>
+            <td>det(A)</td>
+        </tr>
+        <tr>
+            <td>Inverse</td>
+            <td>Matrice inverse</td>
+            <td>A⁻¹</td>
+        </tr>
+    </table>
+    
+    <h2>4.4 StatDeuxVariables</h2>
+    <p>Analyses statistiques pour deux variables :</p>
+    <ul>
+        <li>Calcul des moyennes et écarts-types</li>
+        <li>Régression linéaire</li>
+        <li>Coefficient de corrélation</li>
+        <li>Intervalles de confiance</li>
+    </ul>
+    
+    <h2>4.5 PolynomeCalculator</h2>
+    <p>Manipulation et analyse de polynômes :</p>
+    <div class="code-block">
+        Exemple : Polynôme P(x) = 2x³ - 3x² + x - 5<br>
+        → Degré : 3<br>
+        → Racines : Calculées numériquement<br>
+        → Dérivée : 6x² - 6x + 1
+    </div>
+
+    <div class="page-break"></div>
+
+    <h1 id="exemples">5. Exemples d'Utilisation</h1>
+    
+    <h2>5.1 Calcul Scientifique Simple</h2>
+    <div class="code-block">
+        Calcul : sin(π/2) + log₁₀(100)<br>
+        1. Sélectionner le module CalculatorGWT<br>
+        2. Saisir : sin(pi/2) + log(100)<br>
+        3. Résultat : 1 + 2 = 3
+    </div>
+    
+    <h2>5.2 Résolution d'Équation Complexe</h2>
+    <div class="code-block">
+        Équation : x² - 5x + 6 = 0<br>
+        1. Ouvrir ComplexEquationSolver<br>
+        2. Saisir l'équation<br>
+        3. Résultat : x = 2, x = 3
+    </div>
+    
+    <h2>5.3 Calcul Matriciel Avancé</h2>
+    <div class="code-block">
+        Matrices : A = [1 2; 3 4], B = [2 0; 1 2]<br>
+        Produit A×B :<br>
+        1. Ouvrir MatrixCalculator<br>
+        2. Définir matrice A (2×2)<br>
+        3. Définir matrice B (2×2)<br>
+        4. Calculer A × B<br>
+        5. Résultat : [4 4; 10 8]
+    </div>
+
+    <h1 id="depannage">6. Dépannage</h1>
+    
+    <h2>6.1 Problèmes Courants</h2>
+    
+    <h3>L'application ne se charge pas</h3>
+    <ul>
+        <li>Vérifiez que JavaScript est activé</li>
+        <li>Utilisez un navigateur moderne</li>
+        <li>Vérifiez la console du navigateur pour les erreurs</li>
+    </ul>
+    
+    <h3>Les calculs donnent des résultats incorrects</h3>
+    <ul>
+        <li>Vérifiez la syntaxe de vos entrées</li>
+        <li>Utilisez les parenthèses correctement</li>
+        <li>Consultez l'aide intégrée pour la syntaxe</li>
+    </ul>
+    
+    <h3>Problèmes de performance</h3>
+    <ul>
+        <li>Fermez les onglets inutilisés</li>
+        <li>Utilisez la version Lite pour les machines anciennes</li>
+        <li>Vérifiez la mémoire disponible</li>
+    </ul>
+    
+    <h2>6.2 Journalisation des Erreurs</h2>
+    <p>En cas de problème persistant, activez le mode debug :</p>
+    <div class="code-block">
+        // Dans la console du navigateur (F12)<br>
+        localStorage.setItem('debug', 'true');<br>
+        // Rechargez la page et reproduisez le problème
+    </div>
+
+    <h1 id="faq">7. FAQ</h1>
+    
+    <h3>Q: Puis-je utiliser CalculatorGWT hors ligne ?</h3>
+    <p><strong>R:</strong> Oui ! Une fois téléchargée, l'application fonctionne entièrement hors ligne.</p>
+    
+    <h3>Q: Comment sauvegarder mes calculs ?</h3>
+    <p><strong>R:</strong> Utilisez la fonction d'export dans le menu "Fichier" ou copiez-collez les résultats.</p>
+    
+    <h3>Q: CalculatorGWT est-il gratuit ?</h3>
+    <p><strong>R:</strong> Oui, CalculatorGWT est entièrement gratuit et open-source sous licence MIT.</p>
+    
+    <h3>Q: Puis-je contribuer au projet ?</h3>
+    <p><strong>R:</strong> Absolument ! Contactez-nous pour contribuer au code, documentation ou tests.</p>
+
+    <div class="footer">
+        <p>CalculatorGWT Manual v1.0 | © 2024 CalculatorGWT Team</p>
+        <p>Document généré le : 2024-10-01</p>
+        <p>Pour les mises à jour, visitez : https://calculatorgwt.com</p>
+    </div>
+
+    <div class="no-print">
+        <p><em>Ce document peut être imprimé ou converti en PDF via la fonction d'impression de votre navigateur.</em></p>
+    </div>
+</body>
+</html>

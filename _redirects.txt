@@ -1,0 +1,7 @@
+# Bloquer l'accès aux fichiers source
+/source/* 404
+/src/* 404
+
+# Protection basique - rediriger vers les minifiés
+/css/*.css !\\.min\\.css$  /css/style.min.css 200
+/js/*.js !\\.min\\.js$  /js/main.min.js 200

@@ -1,0 +1,283 @@
+
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Télécharger CalculatorGWT - Calculatrice Polyvalente</title>
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #34495e;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .main-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            padding: 3rem 0;
+        }
+        
+        .app-preview {
+            flex: 1;
+            min-width: 300px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        .app-preview img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .app-info {
+            flex: 2;
+            min-width: 300px;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .feature {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+        }
+        
+        .feature:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-icon {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .download-section {
+            background: var(--secondary-color);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+        
+        .download-btn {
+            display: inline-block;
+            background: var(--accent-color);
+            color: white;
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+            text-decoration: none;
+            border-radius: 50px;
+            margin: 1rem 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        
+        .download-btn:hover {
+            background: #c0392b;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+        }
+        
+        .system-requirements {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-top: 2rem;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+        }
+        
+        footer {
+            background: var(--dark-color);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+        
+        .screenshots {
+            display: flex;
+            gap: 1rem;
+            overflow-x: auto;
+            padding: 1rem 0;
+            margin: 2rem 0;
+        }
+        
+        .screenshot {
+            flex: 0 0 auto;
+            width: 300px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .screenshot img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        @media (max-width: 768px) {
+            .main-content {
+                flex-direction: column;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">🧮 CalculatorGWT</div>
+            <h1>Calculatrice Polyvalente et Puissante</h1>
+            <p class="tagline">Une application complète de calculs mathématiques, statistiques et matriciels développée avec GWT</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="main-content">
+            <div class="app-preview">
+                <!-- Remplacez par une capture d'écran réelle de votre application -->
+                <img src="application1.png" >
+				<img src="application.png" >
+            </div>
+            
+            <div class="app-info">
+                <h2>Une calculatrice complète pour tous vos besoins mathématiques</h2>
+                <p>CalculatorGWT est une application web sophistiquée offrant une large gamme de fonctionnalités de calcul, des opérations basiques aux calculs mathématiques avancés.</p>
+                
+                <div class="features">
+                    <div class="feature">
+                        <div class="feature-icon">🧮</div>
+                        <h3>Calculs Basiques</h3>
+                        <p>Opérations arithmétiques fondamentales avec interface intuitive.</p>
+                    </div>
+                    
+                    <div class="feature">
+                        <div class="feature-icon">📊</div>
+                        <h3>Statistiques</h3>
+						<p>-Analyses statistiques à une seule variable</p>
+						<p>&#8194;et génération d'histogrammes.   </p>
+                        <p>-Analyses statistiques à deux variables.</p>
+                    </div>
+                    
+                    <div class="feature">
+                        <div class="feature-icon">🔢</div>
+                        <h3>Calcul Matriciel</h3>
+                        <p>Opérations sur les matrices : addition, multiplication, déterminants, etc.</p>
+                    </div>
+                    
+                    <div class="feature">
+                        <div class="feature-icon">📈</div>
+                        <h3>Polynômes</h3>
+                        <p>Résolution d'équations polynomiales et analyse des fonctions.</p>
+                    </div>
+                    
+                    <div class="feature">
+                        <div class="feature-icon">∞</div>
+                        <h3>Nombres Complexes</h3>
+                        <p>Résolution d'équations avec nombres complexes.</p>
+                    </div>
+                    
+                    <div class="feature">
+                        <div class="feature-icon">🔍</div>
+                        <h3>PGCD & PPCM</h3>
+                        <p>Calcul du plus grand commun diviseur et plus petit commun multiple.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+          </div>
+       
+        <div class="screenshots">
+            <!-- Remplacez par des captures d'écran réelles -->
+            <div class="screenshot">
+                <img src="<img src="application.png" >
+            </div>
+            </div>
+          </div>	
+		
+        <div class="system-requirements">
+            <h2>Configuration requise</h2>
+            <ul>
+                <li>Navigateur web moderne (Chrome, Firefox, Safari, Edge)</li>
+                <li>JavaScript activé</li>
+                <li>Connexion Internet pour le téléchargement initial</li>
+                <li>Au moins 10 Mo d'espace disque libre</li>
+            </ul>
+        </div>
+  
+    
+    <section class="download-section">
+        <div class="container">
+            <h2>Prêt à utiliser CalculatorGWT ?</h2>
+            <p>Téléchargez gratuitement l'application maintenant</p>
+            <a href="CalculatorGWT.html" class="download-btn">Télécharger CalculatorGWT</a>
+            <p>Version 1.0 • Compatible avec tous les navigateurs modernes</p>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>CalculatorGWT &copy; 2023 - Développé avec GWT (Google Web Toolkit)</p>
+            <p>Pour toute question ou assistance, contactez-nous à support@calculatorgwt.com</p>
+        </div>
+    </footer>
+</body>
+</html>

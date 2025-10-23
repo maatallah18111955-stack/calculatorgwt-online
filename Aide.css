@@ -1,0 +1,35 @@
+.aide-content {
+    font-family: Arial;
+    font-size: 14px;
+    padding: 10px;
+}
+
+.aide-content h1 {
+    color: #006699;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.aide-content h2 {
+    color: #009900;
+    margin-top: 15px;
+    margin-bottom: 8px;
+}
+
+.aide-content h3 {
+    color: #FF6600;
+    margin-top: 12px;
+    margin-bottom: 6px;
+}
+
+.aide-content h4 {
+    color: #CC00CC;
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+
+.aide-content h5 {
+    color: #63FFB2;
+    margin-top: 8px;
+    margin-bottom: 2px;
+}

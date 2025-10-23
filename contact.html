@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - CalculatorGWT</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/responsive.min.css">
+    <style>
+        .contact-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        .contact-card {
+            background: var(--bg-secondary);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            text-align: center;
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s;
+        }
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        .contact-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .contact-form {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            margin-top: 2rem;
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        .form-input, .form-textarea, .form-select {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+        .form-input:focus, .form-textarea:focus, .form-select:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+        .form-textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        .form-submit {
+            background: var(--primary-color);
+            color: white;
+            padding: 0.75rem 2rem;
+            border: none;
+            border-radius: var(--border-radius);
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .form-submit:hover {
+            background: var(--primary-dark);
+        }
+        .faq-section {
+            margin-top: 3rem;
+        }
+        .faq-item {
+            background: white;
+            margin-bottom: 1rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+        .faq-question {
+            padding: 1.5rem;
+            background: var(--bg-secondary);
+            border: none;
+            width: 100%;
+            text-align: left;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+        .faq-answer.active {
+            padding: 1.5rem;
+            max-height: 500px;
+        }
+        .success-message {
+            background: #d1fae5;
+            color: #065f46;
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            margin: 1rem 0;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.png" alt="CalculatorGWT" class="logo-img">
+                <span class="logo-text">CalculatorGWT</span>
+            </div>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Accueil</a>
+                <a href="download.html" class="nav-link">Télécharger</a>
+                <a href="installation-guide.html" class="nav-link">Guide</a>
+                <a href="license.html" class="nav-link">Licence</a>
+                <a href="contact.html" class="nav-link active">Contact</a>
+            </nav>
+        </div 
+    </header>
+
+    <main class="main">
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Contact & Omar Mahtala</h1>
+                    <p class="hero-description">
+                        Nous sommes là pour vous aider ! Questions techniques, suggestions, ou support .
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-content">
+            <div class="container">
+                <div class="success-message" id="successMessage">
+                    ✅ Votre message a été envoyé avec succès ! Nous vous répondrons dans les 24 heures.
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <div class="contact-icon">📧</div>
+                        <h3>Email de Omar Mahtala</h3>
+                        <p>Pour les questions techniques</p>
+                        <p><strong>omarmahtala@gmail.com</strong></p>
+                        <p>Réponse sous 24 heures</p>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">🐛</div>
+                        <h3>Rapport de Bugs</h3>
+                        <p>Signaler un problème ou suggérer une amélioration</p>
+                        <p><strong>bugs@calculatorgwt.com</strong></p>
+                        <p>Incluez les étapes pour reproduire le bug</p>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">💼</div>
+                        <h3>Partnerships</h3>
+                        <p>Collaborations et opportunités commerciales</p>
+                        <p><strong>partnerships@calculatorgwt.com</strong></p>
+                        <p>Pour les entreprises et institutions</p>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h2 style="text-align: center; margin-bottom: 2rem;">📨 Formulaire de Contact</h2>
+                    
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label class="form-label" for="name">Nom Complet *</label>
+                            <input type="text" id="name" class="form-input" required placeholder="Votre nom complet">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="email">Adresse Email *</label>
+                            <input type="email" id="email" class="form-input" required placeholder="votre@email.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="subject">Sujet *</label>
+                            <select id="subject" class="form-select" required>
+                                <option value="">Sélectionnez un sujet</option>
+                                <option value="support">Support Technique</option>
+                                <option value="bug">Rapport de Bug</option>
+                                <option value="feature">Suggestion de Fonctionnalité</option>
+                                <option value="partnership">Partnership</option>
+                                <option value="other">Autre</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="version">Version de CalculatorGWT</label>
+                            <select id="version" class="form-select">
+                                <option value="">Sélectionnez la version</option>
+                                <option value="1.0">Version 1.0</option>
+                                <option value="lite">Version Lite</option>
+                                <option value="other">Autre/Inconnue</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="message">Message *</label>
+                            <textarea id="message" class="form-textarea" required placeholder="Décrivez votre question ou problème en détail..."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label style="display: flex; align-items: center; gap: 0.5rem;">
+                                <input type="checkbox" required>
+                                J'accepte les <a href="license.html" style="color: var(--primary-color);">conditions d'utilisation</a>
+                            </label>
+                        </div>
+
+                        <div style="text-align: center;">
+                            <button type="submit" class="form-submit">Envoyer le Message</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="faq-section">
+                    <h2 style="text-align: center; margin-bottom: 2rem;">❓ Questions Fréquentes</h2>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Comment installer CalculatorGWT ?
+                            <span>+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>L'installation est très simple :</p>
+                            <ol>
+                                <li>Téléchargez le fichier ZIP depuis la page de téléchargement</li>
+                                <li>Extrayez le contenu dans un dossier de votre choix</li>
+                                <li>Ouvrez le fichier <code>CalculatorGWT.html</code> dans votre navigateur</li>
+                                <li>Aucune installation supplémentaire n'est requise !</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Quels navigateurs sont supportés ?
+                            <span>+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>CalculatorGWT fonctionne avec tous les navigateurs modernes :</p>
+                            <ul>
+                                <li>Google Chrome 80+</li>
+                                <li>Mozilla Firefox 75+</li>
+                                <li>Safari 13+</li>
+                                <li>Microsoft Edge 80+</li>
+                            </ul>
+                            <p>Assurez-vous que JavaScript est activé dans votre navigateur.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Puis-je utiliser CalculatorGWT hors ligne ?
+                            <span>+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p><strong>Oui !</strong> CalculatorGWT est une application web progressive (PWA) 
+                            qui fonctionne parfaitement hors ligne une fois téléchargée.</p>
+                            <p>Vous pouvez l'utiliser sans connexion internet après l'installation initiale.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Comment mettre à jour CalculatorGWT ?
+                            <span>+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Pour mettre à jour CalculatorGWT :</p>
+                            <ol>
+                                <li>Téléchargez la nouvelle version depuis notre site</li>
+                                <li>Extrayez les fichiers dans un nouveau dossier</li>
+                                <li>Copiez vos données sauvegardées si nécessaire</li>
+                                <li>Supprimez l'ancienne version</li>
+                            </ol>
+                            <p>Les mises à jour sont toujours gratuites.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Puis-je contribuer au projet ?
+                            <span>+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p><strong>Absolument !</strong> Nous accueillons les contributions :</p>
+                            <ul>
+                                <li>Rapports de bugs détaillés</li>
+                                <li>Suggestions de fonctionnalités</li>
+                                <li>Améliorations de la documentation</li>
+                                <li>Contributions au code source</li>
+                            </ul>
+                            <p>Contactez-nous à <strong>contributions@calculatorgwt.com</strong></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 3rem; padding: 2rem; background: var(--bg-secondary); border-radius: var(--border-radius);">
+                    <h3>📞 Autres Moyens de Contact</h3>
+                    <p><strong>Adresse Postale :</strong> CalculatorGWT Team, 123 Rue de la Science, 75000 Paris, France</p>
+                    <p><strong>Téléphone :</strong> +33 1 23 45 67 89 (Support technique uniquement)</p>
+                    <p><strong>Horaires de Support :</strong> Lundi - Vendredi, 9h00 - 18h00 (CET)</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 CalculatorGWT. Tous droits réservés. | <a href="license.html" style="color: white;">Licence MIT</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Gestion des FAQ
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.nextElementSibling;
+                const isActive = answer.classList.contains('active');
+                
+                // Fermer toutes les réponses
+                document.querySelectorAll('.faq-answer').forEach(ans => {
+                    ans.classList.remove('active');
+                });
+                document.querySelectorAll('.faq-question span').forEach(span => {
+                    span.textContent = '+';
+                });
+                
+                // Ouvrir la réponse cliquée si elle n'était pas active
+                if (!isActive) {
+                    answer.classList.add('active');
+                    button.querySelector('span').textContent = '−';
+                }
+            });
+        });
+
+        // Gestion du formulaire de contact
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Simulation d'envoi (en production, utiliser fetch() vers un backend)
+            const successMessage = document.getElementById('successMessage');
+            successMessage.style.display = 'block';
+            
+            // Réinitialiser le formulaire
+            this.reset();
+            
+            // Cacher le message après 5 secondes
+            setTimeout(() => {
+                successMessage.style.display = 'none';
+            }, 5000);
+        });
+    </script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guide d'installation - CalculatorGWT</title>
+   <link rel="stylesheet" href="css/style.min.css">
+<link rel="stylesheet" href="css/responsive.min.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="images/logo.png" alt="CalculatorGWT Logo">
+                    <span>CalculatorGWT</span>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="download.html" class="nav-link">Télécharger</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="installation-guide.html" class="nav-link active">Installation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="license.html" class="nav-link">Licence</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="guide-hero">
+            <div class="container">
+                <h1>Guide d'installation de CalculatorGWT</h1>
+                <p>Instructions détaillées pour installer et utiliser votre calculatrice scientifique</p>
+            </div>
+        </section>
+
+        <section class="installation-content">
+            <div class="container">
+                <div class="guide-nav">
+                    <h3>Sommaire</h3>
+                    <ul>
+                        <li><a href="#prerequisites">Prérequis</a></li>
+                        <li><a href="#download">Téléchargement</a></li>
+                        <li><a href="#extraction">Extraction</a></li>
+                        <li><a href="#launch">Lancement</a></li>
+                        <li><a href="#troubleshooting">Dépannage</a></li>
+                    </ul>
+                </div>
+
+                <div class="guide-steps">
+                    <article id="prerequisites" class="guide-step">
+                        <h2>1. Prérequis système</h2>
+                        <div class="step-content">
+                            <p>Avant de procéder à l'installation, assurez-vous que votre système répond aux exigences suivantes :</p>
+                            <div class="requirements">
+                                <div class="requirement-category">
+                                    <h4>Navigateurs supportés</h4>
+                                    <ul>
+                                        <li>Google Chrome 80+</li>
+                                        <li>Mozilla Firefox 75+</li>
+                                        <li>Safari 13+</li>
+                                        <li>Microsoft Edge 80+</li>
+                                    </ul>
+                                </div>
+                                <div class="requirement-category">
+                                    <h4>Configuration minimale</h4>
+                                    <ul>
+                                        <li>JavaScript activé</li>
+                                        <li>Au moins 50 MB d'espace disque libre</li>
+                                        <li>Résolution d'écran 1024x768 minimum</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article id="download" class="guide-step">
+                        <h2>2. Téléchargement</h2>
+                        <div class="step-content">
+                            <p>Procédez au téléchargement du package complet :</p>
+                            <ol>
+                                <li>Rendez-vous sur la <a href="download.html">page de téléchargement</a></li>
+                                <li>Cliquez sur le bouton "Télécharger CalculatorGWT.zip"</li>
+                                <li>Enregistrez le fichier dans un emplacement facilement accessible (Bureau ou Documents)</li>
+                            </ol>
+                            <div class="note">
+                                <strong>Note :</strong> Le fichier ZIP pèse environ 15 MB selon la vitesse de votre connexion.
+                            </div>
+                        </div>
+                    </article>
+
+                    <article id="extraction" class="guide-step">
+                        <h2>3. Extraction des fichiers</h2>
+                        <div class="step-content">
+                            <p>Extrayez le contenu du fichier ZIP :</p>
+                            
+                            <h4>Sur Windows :</h4>
+                            <ol>
+                                <li>Faites un clic droit sur le fichier <code>CalculatorGWT.zip</code></li>
+                                <li>Sélectionnez "Extraire tout..."</li>
+                                <li>Choisissez le dossier de destination (ex: <code>C:\Program Files\CalculatorGWT\</code>)</li>
+                                <li>Cliquez sur "Extraire"</li>
+                            </ol>
+
+                            <h4>Sur macOS :</h4>
+                            <ol>
+                                <li>Double-cliquez sur le fichier <code>CalculatorGWT.zip</code></li>
+                                <li>Le contenu sera automatiquement extrait dans le même dossier</li>
+                            </ol>
+
+                            <h4>Sur Linux :</h4>
+                            <pre><code>unzip CalculatorGWT.zip -d ~/CalculatorGWT/</code></pre>
+
+                            <div class="file-structure">
+                                <h4>Structure des fichiers après extraction :</h4>
+                                <pre>
+CalculatorGWT/
+├── CalculatorGWT.html      # Fichier principal à ouvrir
+├── CalculatorGWT.css       # Feuilles de style
+├── CalculatorGWT.js        # Script principal
+├── clear.cache.gif         # Fichiers de cache
+├── historique.txt          # Historique des calculs
+└── ... autres fichiers</pre>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article id="launch" class="guide-step">
+                        <h2>4. Lancement de l'application</h2>
+                        <div class="step-content">
+                            <p>Pour démarrer CalculatorGWT :</p>
+                            <ol>
+                                <li>Ouvrez le dossier où vous avez extrait les fichiers</li>
+                                <li>Double-cliquez sur le fichier <code>CalculatorGWT.html</code></li>
+                                <li>L'application s'ouvrira dans votre navigateur par défaut</li>
+                            </ol>
+
+                            <div class="tip">
+                                <strong>Astuce :</strong> Vous pouvez créer un raccourci sur votre bureau vers le fichier 
+                                <code>CalculatorGWT.html</code> pour un accès rapide.
+                            </div>
+
+                            <h4>Premier lancement :</h4>
+                            <p>Lors du premier lancement, l'application peut mettre quelques secondes à se charger car elle 
+                            initialise tous les modules GWT. Les lancements suivants seront plus rapides.</p>
+                        </div>
+                    </article>
+
+                    <article id="troubleshooting" class="guide-step">
+                        <h2>5. Dépannage</h2>
+                        <div class="step-content">
+                            <div class="troubleshooting-item">
+                                <h4>L'application ne se charge pas</h4>
+                                <p><strong>Solution :</strong> Vérifiez que JavaScript est activé dans votre navigateur.</p>
+                            </div>
+
+                            <div class="troubleshooting-item">
+                                <h4>Erreur de sécurité</h4>
+                                <p><strong>Solution :</strong> Si vous voyez une alerte de sécurité, autorisez le chargement 
+                                du contenu. L'application s'exécute localement et ne nécessite pas de connexion Internet.</p>
+                            </div>
+
+                            <div class="troubleshooting-item">
+                                <h4>Interface non responsive</h4>
+                                <p><strong>Solution :</strong> Redimensionnez la fenêtre de votre navigateur ou actualisez la page.</p>
+                            </div>
+
+                            <div class="troubleshooting-item">
+                                <h4>Fonctionnalités manquantes</h4>
+                                <p><strong>Solution :</strong> Assurez-vous que tous les fichiers ont été correctement extraits 
+                                et se trouvent dans le même dossier.</p>
+                            </div>
+
+                            <div class="support-note">
+                                <p>Si vous rencontrez d'autres problèmes, consultez notre <a href="contact.html">page de contact</a> 
+                                pour obtenir de l'aide.</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>CalculatorGWT</h3>
+                    <p>Calculatrice scientifique avancée</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Liens Rapides</h4>
+                    <ul>
+                        <li><a href="download.html">Télécharger</a></li>
+                        <li><a href="installation-guide.html">Guide d'installation</a></li>
+                        <li><a href="license.html">Licence</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="docs/MANUAL.pdf">Manuel d'utilisation</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 CalculatorGWT. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+   <script src="js/main.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+# Protéger l'accès aux fichiers sensibles
+<Files "*.js">
+    Deny from all
+</Files>
+
+<Files "*.css">
+    Deny from all
+</Files>
+
+# Mais autoriser l'accès aux fichiers minifiés
+<Files "*.min.js">
+    Allow from all
+</Files>
+
+<Files "*.min.css">
+    Allow from all
+</Files>
